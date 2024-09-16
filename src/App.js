@@ -9,6 +9,12 @@ import Results from './pages/Result'; // Updated the import to match your Result
 import Resources from './pages/Resources';
 import MentorDashboard from './pages/MentorDashboard';
 
+
+
+import ChatbotOverlay from './ChatbotOverlay';
+
+
+
 function App() {
   return (
     <div>
@@ -25,6 +31,7 @@ function App() {
           <Route path="/resources" element={<Resources />} />
           <Route path="/mentordashboard" element={<MentorDashboard />} />
         </Routes>
+        <ChatbotOverlay/>
       </div>
     </div>
   );
