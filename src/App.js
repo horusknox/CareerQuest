@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import Quiz from './pages/Quiz';
-import Result from './pages/Result';
+import Results from './pages/Result'; // Updated the import to match your Results component
 import Resources from './pages/Resources';
 import MentorDashboard from './pages/MentorDashboard';
 
@@ -21,7 +21,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/quiz" element={<Quiz />} />
-          <Route path="/result" element={<Result />} />
+          <Route path="/results" element={<Results />} /> {/* Updated to match the Results route */}
           <Route path="/resources" element={<Resources />} />
           <Route path="/mentordashboard" element={<MentorDashboard />} />
         </Routes>
