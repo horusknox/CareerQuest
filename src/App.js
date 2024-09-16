@@ -13,16 +13,19 @@ function App() {
   return (
     <div>
       <NavigationBar />
-      <Routes>
-        <Route path="/CareerQuest" element={<Home />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/quiz" element={<Quiz />} />
-        <Route path="/result" element={<Result />} />
-        <Route path="/resources" element={<Resources />} />
-        <Route path="/mentordashboard" element={<MentorDashboard />} />
-      </Routes>
+      <div style={{ marginTop: '100px' }}> {/* Adjust this value to the height of your Navbar */}
+        <Routes>
+          <Route path="/CareerQuest" element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/quiz" element={<Quiz />} />
+          <Route path="/result" element={<Result />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/mentordashboard" element={<MentorDashboard />} />
+        </Routes>
+      </div>
     </div>
   );
 }
