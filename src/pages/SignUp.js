@@ -51,6 +51,34 @@ function SignUpForm() {
               />
             </Form.Group>
 
+
+            <Form.Group className="form mb-3">
+              <Form.Label htmlFor="floatingInput" className="text-light">School Code</Form.Label>
+              <Form.Control
+                type="number"
+                id="floatingInput"
+                placeholder="1234"
+                required
+                className="bg-secondary text-light border-0"
+              />
+            </Form.Group>
+
+
+
+            <Form.Group className="form mb-3">
+              <Form.Label htmlFor="floatingInput" className="text-light">Name</Form.Label>
+              <Form.Control
+                type="text"
+                id="floatingInput"
+                placeholder="Jhon Doe"
+                required
+                className="bg-secondary text-light border-0"
+              />
+            </Form.Group>
+
+
+
+
             <Form.Group className="form mb-3">
               <Form.Label htmlFor="floatingPassword" className="text-light">Password</Form.Label>
               <Form.Control
