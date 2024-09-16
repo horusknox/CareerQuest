@@ -16,9 +16,12 @@ function Quiz() {
   };
 
   return (
-    <Container fluid className="d-flex justify-content-center align-items-center min-vh-100 p-3" style={{ backgroundColor: '#121212' }}>
+    <Container fluid className="d-flex flex-column justify-content-center align-items-center min-vh-100 p-3" style={{ backgroundColor: '#121212' }}>
+      <h1 style={{ color: 'white', marginBottom: '2rem' }}>Let's get you a career path🕵️‍♀️</h1>
       <Card style={{ width: '100%', maxWidth: '1000px', backgroundColor: '#1e1e1e', color: 'white' }}>
-        <Card.Header as="h3" style={{ backgroundColor: '#333', fontSize: '1.75rem' }}>What interests you the most?</Card.Header>
+        <Card.Header as="h3" style={{ backgroundColor: '#333', fontSize: '1.75rem' }}>
+          What interests you the most?
+        </Card.Header>
         <Card.Body>
           <Card.Title style={{ fontSize: '1.5rem' }}>{question}</Card.Title>
           <ListGroup variant="flush">

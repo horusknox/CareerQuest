@@ -29,7 +29,7 @@ function SignInForm() {
         />
         <main className="form-signin mx-auto" style={{ maxWidth: '500px', width: '100%' }}>
           <Form onSubmit={handleSubmit} className="bg-dark p-4 rounded">
-            <h1 className="h3 mb-3 fw-normal text-light">Please enter your details and sign in</h1>
+            <h1 className="h3 mb-3 fw-normal text-light">Please enter details and sign in ✨</h1>
 
             <Form.Group className="form mb-3">
               <Form.Label className="text-light">Email address</Form.Label>

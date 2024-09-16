@@ -4,17 +4,26 @@ import { ForceGraph2D } from 'react-force-graph';
 import { useLocation } from 'react-router-dom';
 
 const getCareerPath = (choice) => {
+  const emojiMap = {
+    Computer: '💻',
+    Negotiating: '🤝',
+    Physics: '🔬',
+    'Helping People': '❤️'
+  };
+
+  const emojis = emojiMap[choice] || '🌟'; // Default emoji
+
   switch (choice) {
     case 'Computer':
       return {
         nodes: [
-          { id: '10th Grade', color: '#FF6347', label: '10th Grade' },
-          { id: '12th Grade', color: '#4682B4', label: '12th Grade' },
-          { id: 'Bachelor\'s Degree in Computer Science', color: '#32CD32', label: 'Bachelor\'s in CS' },
-          { id: 'Master\'s Degree in Computer Science', color: '#FFD700', label: 'Master\'s in CS' },
-          { id: 'Software Engineer', color: '#FF4500', label: 'Software Engineer' },
-          { id: 'Senior Software Engineer', color: '#8A2BE2', label: 'Senior Software Engineer' },
-          { id: 'Lead Engineer', color: '#00BFFF', label: 'Lead Engineer' }
+          { id: '10th Grade', color: '#FF6347', label: `10th Grade ${emojis}` },
+          { id: '12th Grade', color: '#4682B4', label: `12th Grade ${emojis}` },
+          { id: 'Bachelor\'s Degree in Computer Science', color: '#32CD32', label: `Bachelor's in CS ${emojis}` },
+          { id: 'Master\'s Degree in Computer Science', color: '#FFD700', label: `Master's in CS ${emojis}` },
+          { id: 'Software Engineer', color: '#FF4500', label: `Software Engineer ${emojis}` },
+          { id: 'Senior Software Engineer', color: '#8A2BE2', label: `Senior Software Engineer ${emojis}` },
+          { id: 'Lead Engineer', color: '#00BFFF', label: `Lead Engineer ${emojis}` }
         ],
         links: [
           { source: '10th Grade', target: '12th Grade' },
@@ -28,13 +37,13 @@ const getCareerPath = (choice) => {
     case 'Negotiating':
       return {
         nodes: [
-          { id: '10th Grade', color: '#FF6347', label: '10th Grade' },
-          { id: '12th Grade', color: '#4682B4', label: '12th Grade' },
-          { id: 'Bachelor\'s Degree in Business', color: '#32CD32', label: 'Bachelor\'s in Business' },
-          { id: 'Master\'s Degree in Negotiation', color: '#FFD700', label: 'Master\'s in Negotiation' },
-          { id: 'Negotiation Specialist', color: '#FF4500', label: 'Negotiation Specialist' },
-          { id: 'Senior Negotiator', color: '#8A2BE2', label: 'Senior Negotiator' },
-          { id: 'Negotiation Consultant', color: '#00BFFF', label: 'Negotiation Consultant' }
+          { id: '10th Grade', color: '#FF6347', label: `10th Grade ${emojis}` },
+          { id: '12th Grade', color: '#4682B4', label: `12th Grade ${emojis}` },
+          { id: 'Bachelor\'s Degree in Business', color: '#32CD32', label: `Bachelor's in Business ${emojis}` },
+          { id: 'Master\'s Degree in Negotiation', color: '#FFD700', label: `Master's in Negotiation ${emojis}` },
+          { id: 'Negotiation Specialist', color: '#FF4500', label: `Negotiation Specialist ${emojis}` },
+          { id: 'Senior Negotiator', color: '#8A2BE2', label: `Senior Negotiator ${emojis}` },
+          { id: 'Negotiation Consultant', color: '#00BFFF', label: `Negotiation Consultant ${emojis}` }
         ],
         links: [
           { source: '10th Grade', target: '12th Grade' },
@@ -48,13 +57,13 @@ const getCareerPath = (choice) => {
     case 'Physics':
       return {
         nodes: [
-          { id: '10th Grade', color: '#FF6347', label: '10th Grade' },
-          { id: '12th Grade', color: '#4682B4', label: '12th Grade' },
-          { id: 'Bachelor\'s Degree in Physics', color: '#32CD32', label: 'Bachelor\'s in Physics' },
-          { id: 'Master\'s Degree in Physics', color: '#FFD700', label: 'Master\'s in Physics' },
-          { id: 'Research Scientist', color: '#FF4500', label: 'Research Scientist' },
-          { id: 'Senior Research Scientist', color: '#8A2BE2', label: 'Senior Research Scientist' },
-          { id: 'Physics Professor', color: '#00BFFF', label: 'Physics Professor' }
+          { id: '10th Grade', color: '#FF6347', label: `10th Grade ${emojis}` },
+          { id: '12th Grade', color: '#4682B4', label: `12th Grade ${emojis}` },
+          { id: 'Bachelor\'s Degree in Physics', color: '#32CD32', label: `Bachelor's in Physics ${emojis}` },
+          { id: 'Master\'s Degree in Physics', color: '#FFD700', label: `Master's in Physics ${emojis}` },
+          { id: 'Research Scientist', color: '#FF4500', label: `Research Scientist ${emojis}` },
+          { id: 'Senior Research Scientist', color: '#8A2BE2', label: `Senior Research Scientist ${emojis}` },
+          { id: 'Physics Professor', color: '#00BFFF', label: `Physics Professor ${emojis}` }
         ],
         links: [
           { source: '10th Grade', target: '12th Grade' },
@@ -68,13 +77,13 @@ const getCareerPath = (choice) => {
     case 'Helping People':
       return {
         nodes: [
-          { id: '10th Grade', color: '#FF6347', label: '10th Grade' },
-          { id: '12th Grade', color: '#4682B4', label: '12th Grade' },
-          { id: 'Bachelor\'s Degree in Social Work', color: '#32CD32', label: 'Bachelor\'s in Social Work' },
-          { id: 'Master\'s Degree in Social Work', color: '#FFD700', label: 'Master\'s in Social Work' },
-          { id: 'Social Worker', color: '#FF4500', label: 'Social Worker' },
-          { id: 'Senior Social Worker', color: '#8A2BE2', label: 'Senior Social Worker' },
-          { id: 'Social Work Director', color: '#00BFFF', label: 'Social Work Director' }
+          { id: '10th Grade', color: '#FF6347', label: `10th Grade ${emojis}` },
+          { id: '12th Grade', color: '#4682B4', label: `12th Grade ${emojis}` },
+          { id: 'Bachelor\'s Degree in Social Work', color: '#32CD32', label: `Bachelor's in Social Work ${emojis}` },
+          { id: 'Master\'s Degree in Social Work', color: '#FFD700', label: `Master's in Social Work ${emojis}` },
+          { id: 'Social Worker', color: '#FF4500', label: `Social Worker ${emojis}` },
+          { id: 'Senior Social Worker', color: '#8A2BE2', label: `Senior Social Worker ${emojis}` },
+          { id: 'Social Work Director', color: '#00BFFF', label: `Social Work Director ${emojis}` }
         ],
         links: [
           { source: '10th Grade', target: '12th Grade' },
@@ -97,22 +106,31 @@ const Results = () => {
 
   const careerPathData = getCareerPath(choice);
 
+  const emojiMap = {
+    Computer: '💻',
+    Negotiating: '🤝',
+    Physics: '🔬',
+    'Helping People': '❤️'
+  };
+
+  const emojis = emojiMap[choice] || '🌟'; // Default emoji
+
   let careerTitle = 'Career';
   switch (choice) {
     case 'Computer':
-      careerTitle = 'Computer Science Engineer';
+      careerTitle = `Computer Science Engineer ${emojis}`;
       break;
     case 'Negotiating':
-      careerTitle = 'Negotiation Consultant';
+      careerTitle = `Negotiation Consultant ${emojis}`;
       break;
     case 'Physics':
-      careerTitle = 'Physics Professor';
+      careerTitle = `Physics Professor ${emojis}`;
       break;
     case 'Helping People':
-      careerTitle = 'Social Work Director';
+      careerTitle = `Social Work Director ${emojis}`;
       break;
     default:
-      careerTitle = 'Career Path';
+      careerTitle = `Career Path ${emojis}`;
       break;
   }
 
@@ -125,11 +143,11 @@ const Results = () => {
         <ForceGraph2D
           graphData={careerPathData}
           nodeAutoColorBy="color"
-          nodeRelSize={24}  // Increased size factor for visibility
+          nodeRelSize={24}
           nodeCanvasObject={(node, ctx, globalScale) => {
             const label = node.id;
-            const radius = 60 / globalScale; // Increased node radius
-            const fontSize = 18 / globalScale; // Adjusted font size for better fit
+            const radius = 60 / globalScale;
+            const fontSize = 18 / globalScale;
             ctx.beginPath();
             ctx.arc(node.x, node.y, radius, 0, 2 * Math.PI, false);
             ctx.fillStyle = node.color;

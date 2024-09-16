@@ -34,7 +34,7 @@ function SignUpForm() {
         />
         <main className="form-signin mx-auto" style={{ maxWidth: '500px', width: '100%' }}>
           <Form onSubmit={handleSubmit} className="bg-dark p-4 rounded">
-            <h1 className="h3 mb-3 fw-normal text-light">Please enter details and Sign Up</h1>
+            <h1 className="h3 mb-3 fw-normal text-light">Please enter details and Sign Up 🔑</h1>
 
             {error && <div className="alert alert-danger">{error}</div>}
 

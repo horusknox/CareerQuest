@@ -11,7 +11,7 @@ function HeroSection() {
         width="350" 
         height="350" 
       />
-      <h1 className="display-5 fw-bold">Empower Your Future</h1>
+      <h1 className="display-5 fw-bold">Empower Your Future🔥</h1>
       <div className="col-lg-6 mx-auto">
         <p className="lead mb-4">
           Explore and customize your career path with CareerQuest, a comprehensive platform designed to guide students through various career options. Featuring interactive quizzes, resources, and mentorship opportunities, CareerQuest helps students make informed decisions about their future, offering tools and advice from industry professionals to ensure they achieve their career goals.
