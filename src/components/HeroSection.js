@@ -20,7 +20,7 @@ function HeroSection() {
           I am...
         </p>
         <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <a href="/Quiz" className="btn btn-primary btn-lg px-4 gap-3">Student</a>
+          <a href="/quiz" className="btn btn-primary btn-lg px-4 gap-3">Student</a>
           <a href="/mentordashboard" className="btn btn-outline-secondary btn-lg px-4">Mentor</a>
         </div>
       </div>
