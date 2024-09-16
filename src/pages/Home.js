@@ -3,7 +3,7 @@ import HeroSection from '../components/HeroSection';
 
 function Home() {
   return (
-    <div>
+    <div style={{backgroundColor:'#212529'}}>
       <HeroSection />
     </div>
   );
