@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 import CareerQuestLogo from './CareerQuestLogo.jpg'; // Corrected typo in logo filename
 
 function HeroSection() {
@@ -20,8 +21,8 @@ function HeroSection() {
           I am...
         </p>
         <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <a href="/quiz" className="btn btn-primary btn-lg px-4 gap-3">Student</a>
-          <a href="/mentordashboard" className="btn btn-outline-secondary btn-lg px-4">Mentor</a>
+          <Link to="/quiz" className="btn btn-primary btn-lg px-4 gap-3">Student</Link>
+          <Link to="/mentordashboard" className="btn btn-outline-secondary btn-lg px-4">Mentor</Link>
         </div>
       </div>
     </div>
