@@ -1,9 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import CareerQuestLogo from './CareerQuestLogo.jpg';
 
 function NavigationBar() {
+  const [hovered, setHovered] = useState(null);
+
+  const navLinkStyle = (isHovered) => ({
+    color: isHovered ? 'black' : 'white',
+    padding: '0.5rem 1rem',
+    borderRadius: '0.25rem',
+    backgroundColor: isHovered ? 'white' : 'transparent',
+    transition: 'background-color 0.3s, color 0.3s'
+  });
+
+  const buttonSuccessStyle = {
+    backgroundColor: '#28a745',
+    border: 'none',
+    color: 'white',
+    padding: '0.5rem 1rem',
+    borderRadius: '0.25rem'
+  };
+  
+  const buttonInfoStyle = {
+    backgroundColor: '#17a2b8',
+    border: 'none',
+    color: 'white',
+    padding: '0.5rem 1rem',
+    borderRadius: '0.25rem'
+  };
+
   return (
     <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
       <Container fluid>
@@ -19,19 +45,27 @@ function NavigationBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/CareerQuest">Home</Nav.Link>
-            <Nav.Link as={Link} to="/Quiz">Quiz</Nav.Link>
-            {/* <Nav.Link as={Link} to="/result">Result</Nav.Link> */}
-            <Nav.Link as={Link} to="/resources">Resources</Nav.Link>
-            <Nav.Link as={Link} to="/mentordashboard">Mentor Dashboard</Nav.Link>
+            {['Home', 'Quiz', 'Resources', 'Mentor Dashboard'].map((item, index) => (
+              <Nav.Link 
+                as={Link} 
+                to={`/${item.toLowerCase().replace(' ', '')}`} 
+                key={index}
+                style={navLinkStyle(hovered === item)}
+                onMouseEnter={() => setHovered(item)}
+                onMouseLeave={() => setHovered(null)}
+              >
+                {item}
+              </Nav.Link>
+            ))}
+            {/* <Nav.Link as={Link} to="/result" style={navLinkStyle(hovered === 'Result')} onMouseEnter={() => setHovered('Result')} onMouseLeave={() => setHovered(null)}>Result</Nav.Link> */}
           </Nav>
           <Nav className="ms-auto">
             {/* Custom background colors for each button */}
             <Nav.Link as={Link} to="/signup">
-              <button className="btn btn-success" style={{ backgroundColor: '#28a745', border: 'none' }}>Sign Up</button>
+              <button className="btn" style={buttonSuccessStyle}>Sign Up</button>
             </Nav.Link>
             <Nav.Link as={Link} to="/signin">
-              <button className="btn btn-info" style={{ backgroundColor: '#17a2b8', border: 'none' }}>Sign In</button>
+              <button className="btn" style={buttonInfoStyle}>Sign In</button>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
