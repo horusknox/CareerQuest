@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
       <NavigationBar />
-      <div style={{ marginTop: '100px' }}> {/* Adjust this value to the height of your Navbar */}
+      <div style={{ marginTop: '125px' }}> {/* Adjust this value to the height of your Navbar */}
         <Routes>
           <Route path="/CareerQuest" element={<Home />} />
           <Route path="/" element={<Home />} />

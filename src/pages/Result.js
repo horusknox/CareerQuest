@@ -97,7 +97,6 @@ const Results = () => {
 
   const careerPathData = getCareerPath(choice);
 
-  // Determine the suitable career path title
   let careerTitle = 'Career';
   switch (choice) {
     case 'Computer':
@@ -118,20 +117,21 @@ const Results = () => {
   }
 
   return (
-    <Container fluid className="d-flex flex-column align-items-center min-vh-100" style={{ backgroundColor: '#121212', color: 'white' }}>
-      <h1 style={{ marginTop: '20px', marginBottom: '20px', color: 'white' }}>
-        You're suitable for being a {careerTitle}
+    <Container fluid style={{ backgroundColor: '#121212', color: 'white', padding: '0', height: '100vh', margin: '0' }}>
+      <h1 style={{ margin: '20px 0', color: 'white', textAlign: 'center', fontSize: '24px' }}>
+        You are suitable for being a {careerTitle}
       </h1>
-      <div style={{ width: '100%', height: '80vh' }}>
+      <div style={{ width: '100%', height: '90vh', position: 'relative' }}>
         <ForceGraph2D
           graphData={careerPathData}
           nodeAutoColorBy="color"
-          nodeRelSize={40}
+          nodeRelSize={24}  // Increased size factor for visibility
           nodeCanvasObject={(node, ctx, globalScale) => {
             const label = node.id;
-            const fontSize = 24 / globalScale;
+            const radius = 60 / globalScale; // Increased node radius
+            const fontSize = 18 / globalScale; // Adjusted font size for better fit
             ctx.beginPath();
-            ctx.arc(node.x, node.y, 70 / globalScale, 0, 2 * Math.PI, false); // Increased node size
+            ctx.arc(node.x, node.y, radius, 0, 2 * Math.PI, false);
             ctx.fillStyle = node.color;
             ctx.fill();
             ctx.strokeStyle = 'white';
