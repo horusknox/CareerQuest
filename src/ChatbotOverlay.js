@@ -18,7 +18,7 @@ const ChatbotOverlay = () => {
       setMessages([...messages, { type: 'user', text: message }, { type: 'bot', text: 'With an MPC background, you can pursue careers as a Data Scientist, Software Engineer, Machine Learning Engineer, Quantitative Analyst, or Research Scientist.' }]);
     }
   };
-
+ 
   return (
     <>
       <button
