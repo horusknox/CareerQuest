@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/CareerQuest/static/css/main.d221dc40.css",
-    "main.js": "/CareerQuest/static/js/main.906bc000.js",
+    "main.js": "/CareerQuest/static/js/main.1047cd10.js",
     "static/media/CareerQuestLogo.jpg": "/CareerQuest/static/media/CareerQuestLogo.ffdf220732b5a98978f5.jpg",
     "index.html": "/CareerQuest/index.html",
     "main.d221dc40.css.map": "/CareerQuest/static/css/main.d221dc40.css.map",
-    "main.906bc000.js.map": "/CareerQuest/static/js/main.906bc000.js.map"
+    "main.1047cd10.js.map": "/CareerQuest/static/js/main.1047cd10.js.map"
   },
   "entrypoints": [
     "static/css/main.d221dc40.css",
-    "static/js/main.906bc000.js"
+    "static/js/main.1047cd10.js"
   ]
 }
